@@ -17,14 +17,17 @@ const NewsSumaryCard = ({news}) => {
             <div>
                 <Image
                   roundedCircle
+                  className='me-3'
                   src={author.img}
                   style={{height : '60px'}}
 
                 >
-            
-
                 </Image>
             </div>
+            <div>
+                    <p className='mb-0'>{author?.name}</p>
+                    <p > {author?.published_date}</p>
+                </div>
 
             <div>
                 <FaRegBookmark></FaRegBookmark>
