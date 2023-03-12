@@ -6,6 +6,7 @@ import Header from '../Pages/Shared/Header/Header';
 import LeftSideNav from '../Pages/Shared/LeftSideNav/LeftSideNav';
 import RightSideNav from '../Pages/Shared/RightSideNav/RightSideNav';
 
+
 const Main = () => {
     return (
         <div>
