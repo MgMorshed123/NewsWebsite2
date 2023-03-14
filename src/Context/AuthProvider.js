@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { app } from './../__steps';
 
-import {getAuth, onAuthStateChanged, signInWithPopup, updateProfile}  from  'firebase/auth';
+import {getAuth, onAuthStateChanged, sendEmailVerification, signInWithPopup, updateProfile}  from  'firebase/auth';
 
 
 export const AuthContext = createContext();
@@ -45,8 +45,13 @@ const {user ,setUser} =useState(null)
 
      }
 
+     const verifyEmail = () => {
 
-    const authInfo ={providerLogin, updateUserProfile}
+        return sendEmailVerification(auth.currentUser)
+     }
+
+
+    const authInfo ={providerLogin, updateUserProfile, verifyEmail}
     return (
         <AuthContext.Provider value={authInfo}>
           {children}
